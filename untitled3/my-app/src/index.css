@@ -1,0 +1,84 @@
+body {
+    font: 15px "Century Gothic", Futura, sans-serif;
+    background:  url('images/bg.jpg');
+    background-size: cover;
+}
+
+.app {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+.metro {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    background: #08C;
+    /* Font styles */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font: 10px "Century Gothic", Futura, sans-serif;
+
+}
+
+.metro:hover {
+    background: #0AF
+}
+
+.card {
+    width: 50%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+}
+.card:hover {
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, .15);
+}
+
+.card-img {
+    flex-direction: column;
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+}
+.line {
+    display: block;
+    border: none;
+    color: #333;
+    background: transparent;
+    border-bottom: 1px dotted black;
+    padding: 5px 2px 0 2px;
+}
+
+.line:focus {
+    outline: none;
+    border-color: #51CBEE;
+}
+.mac {
+    display: block;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 8px;
+    color: #333;
+    box-shadow:
+            inset 0 2px 0 rgba(0,0,0,.2),
+            0 0 4px rgba(0,0,0,0.1);
+}
+
+.mac:focus {
+    outline: none;
+    box-shadow:
+            inset 0 2px 0 rgba(0,0,0,.2),
+            0 0 4px rgba(0,0,0,0.1),
+            0 0 5px 1px #51CBEE;
+}
+.marked {
+    border: 2px solid crimson;
+}
