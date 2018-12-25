@@ -30,7 +30,8 @@ class PhoneList extends React.Component {
             {marked: false, name:'Xiaomi mi8',price:'500',img:'mi.jpeg'},
             {marked: false, name:'Samsung S9',price:'900',img:'samsung.jpeg'}
         ],
-        visible:true
+        visible:true,
+        appTitle:'Phones'
     };
     handleSearch(event){
           console.log(event.target.value);
@@ -59,10 +60,28 @@ class PhoneList extends React.Component {
          )
      })
     }
+    titleChangeHandler(title){
+        if (title.trim() === ''){
+            return
+        }
+        this.setState({
+            appTitle:title
+        })
+    }
     render() {
+        const style ={
+            marginRight:20
+        };
         return (
             <div className ='app'>
-                <button onClick={() =>  this.toggleHandler()}> Toggle </button>
+                <h1>{this.state.appTitle}</h1>
+                <button onClick={() =>  this.toggleHandler()} style={style}> On/Off </button>
+                <input
+                    type='text'
+                    placeholder='Change Title'
+                    onChange={(event)=> this.titleChangeHandler(event.target.value)}
+                    value={this.state.appTitle}
+                   />
                 <input type='text' className='mac' onChange={this.handleSearch}/>
                 <div className='list'>
                     {this.renderPhones()}
